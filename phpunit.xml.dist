@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         colors="true"
+         bootstrap="tests/Bootstrap.php"
+>
+    <testsuites>
+        <testsuite name="InProgress">
+            <file>tests/Services/TemplatesTest.php</file>
+        </testsuite>
+        <testsuite name="Messages">
+            <file>tests/Messages/MessagesSendTest.php</file>
+            <file>tests/Messages/MessagesSendTemplateTest.php</file>
+            <file>tests/Messages/MessagesInfoTest.php</file>
+            <file>tests/Messages/MessagesParseTest.php</file>
+            <file>tests/Messages/MessagesScheduledTest.php</file>
+            <file>tests/Messages/MessagesSearchTest.php</file>
+            <file>tests/Messages/MessagesContentTest.php</file>
+        </testsuite>
+        <testsuite name="Services">
+            <file>tests/Services/TemplatesTest.php</file>
+            <file>tests/Services/SendersTest.php</file>
+            <file>tests/Services/RejectsTest.php</file>
+            <file>tests/Services/WhitelistsTest.php</file>
+            <file>tests/Services/UsersTest.php</file>
+            <file>tests/Services/UrlsTest.php</file>
+            <file>tests/Services/TagsTest.php</file>
+            <file>tests/Services/WebhooksTest.php</file>
+            <file>tests/Services/SubaccountsTest.php</file>
+            <file>tests/Services/InboundTest.php</file>
+            <file>tests/Services/ExportsTest.php</file>
+            <file>tests/Services/IpsTest.php</file>
+            <file>tests/Services/MetadataTest.php</file>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory>./src/</directory>
+            <exclude>
+                <file>tests/Bootstrap.php</file>
+                <directory>./tests/files</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>
